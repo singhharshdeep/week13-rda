@@ -70,12 +70,12 @@ export default function Home() {
 
   return (
     <div className="flex flex-col justify-center">
-      <div className="text-4xl font-bold">Week 11: API fetching</div>
+      <div className="text-4xl font-bold">Week 12: API fetching</div>
       {isLoading && <div>Loading...</div>}
       {error && <div className="text-red-500">{error}</div>}
       {posts && (
         <>
-          <div className="text-2xl">Social media posts</div>
+          <div className="text-2xl">Social media Feed:</div>
           {posts.map((post) => (
             <div className="border p-2 my-2" key={post.id}>
               <div>Title: {post.title}</div>
