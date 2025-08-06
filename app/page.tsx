@@ -3,9 +3,13 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function Home() {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState<{
+    id: string;
+    title: string;
+    body: string;
+  }[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   async function fetchPosts() {
     // Fetch data from this api
